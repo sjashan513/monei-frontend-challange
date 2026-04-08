@@ -12,5 +12,17 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "/src")
     }
+  },
+  server: {
+    watch: {
+      usePolling: true,
+    },
+    proxy: {
+      '/api/graphql': {
+        target: 'https://mo-graphql.microapps-staging.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/graphql/, ''),
+      },
+    }
   }
 })
