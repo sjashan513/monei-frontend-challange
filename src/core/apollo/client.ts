@@ -4,9 +4,9 @@ import {
     CombinedGraphQLErrors,
     HttpLink,
     ApolloLink,
-} from '@apollo/client';
-import { SetContextLink } from '@apollo/client/link/context';
-import { ErrorLink } from '@apollo/client/link/error';
+} from "@apollo/client";
+import { SetContextLink } from "@apollo/client/link/context";
+import { ErrorLink } from "@apollo/client/link/error";
 
 const GRAPHQL_URL = "/api/graphql";
 const API_KEY = import.meta.env.VITE_MONEI_API_KEY as string;
@@ -24,16 +24,15 @@ const authLink = new SetContextLink((prevContext, _) => {
 });
 
 const errorLink = new ErrorLink(({ error }) => {
-
     if (CombinedGraphQLErrors.is(error)) {
         error.errors.forEach(({ message, locations, path }) => {
-            console.error(`GraphQL error: Message: ${message}, Location: ${locations}, Path: ${path}`);
+            console.error(
+                `GraphQL error: Message: ${message}, Location: ${locations}, Path: ${path}`,
+            );
         });
-    }
-    else if (error) {
+    } else if (error) {
         console.error(`Network error: ${error}`);
     }
-
 });
 
 const httpLink = new HttpLink({
@@ -49,21 +48,26 @@ const cache = new InMemoryCache({
         Query: {
             fields: {
                 charges: {
-                    keyArgs: false, // Ignoramos los argumentos para que todo vaya a la misma lista
-                    merge(existing, incoming) {
-                        if (!existing) return incoming;
+                    keyArgs: false,
+                    merge(existing, incoming, { args }) {
+                        const from = args?.from || 0;
+                        if (from === 0) {
+                            return incoming;
+                        }
 
+                        const existingItems = existing?.items || [];
+                        const incomingItems = incoming?.items || [];
                         return {
                             ...incoming,
-                            // Fusionamos los arrays de items, manteniendo el total actualizado
-                            items: [...(existing.items || []), ...(incoming.items || [])],
+                            items: [...existingItems, ...incomingItems],
                         };
-                    }
-                }
-            }
-        }
-    }
-})
+                    },
+                },
+            },
+        },
+
+    },
+});
 const link = ApolloLink.from([errorLink, authLink, httpLink]);
 
 // Initialize Apollo Client(Singleton)
@@ -73,4 +77,4 @@ export const client = new ApolloClient({
     devtools: {
         enabled: !!import.meta.env.DEV,
     },
-})
+});

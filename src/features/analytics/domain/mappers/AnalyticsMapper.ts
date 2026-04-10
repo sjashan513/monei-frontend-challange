@@ -11,7 +11,6 @@ export const AnalyticsMapper = {
             return { totalAmount: 0, transactionCount: 0, averageValue: 0, currency: 'EUR', chartData: [] };
         }
 
-        // Sumamos succeeded + captured por si la API reparte el dinero entre ambos
         const totalAmount = (raw.total.succeededAmount + raw.total.capturedAmount) / 100;
         const count = raw.total.succeededCount;
 
@@ -28,7 +27,6 @@ export const AnalyticsMapper = {
         if (!Array.isArray(data)) return [];
         return data.map(point => {
             const date = new Date(point.timestamp * 1000);
-            // Formato más claro para meses o días
             const label = date.toLocaleDateString('es-ES', {
                 month: 'short',
                 day: 'numeric',

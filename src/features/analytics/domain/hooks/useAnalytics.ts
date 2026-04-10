@@ -24,9 +24,7 @@ export const useAnalytics = (days = 365) => {
 
     const { data, loading, error } = useQuery<RevenueStatsResponse>(GET_REVENUE_STATS_QUERY, {
         variables: queryVariables,
-        // Eliminamos el log de introspección para limpiar la consola
     });
-    console.log(error)
 
     const stats: PaymentAnalytics = useMemo(() => {
         return AnalyticsMapper.toDomain(data?.chargesDateRangeKPI);

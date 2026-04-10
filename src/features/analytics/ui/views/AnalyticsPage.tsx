@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAnalytics } from '../../domain/hooks/useAnalytics';
 import { KpiCard } from '../components/KpiCard';
-import { RevenueChart } from '../components/RevenueChart'; // Importamos la nueva gráfica
+import { RevenueChart } from '../components/RevenueChart';
 import { DollarSign, BarChart3, Receipt, Loader2, TrendingUp } from 'lucide-react';
 
 export const AnalyticsPage: React.FC = () => {
@@ -60,14 +60,9 @@ export const AnalyticsPage: React.FC = () => {
                 />
             </div>
 
-            {/* La Gráfica Real */}
             <RevenueChart data={stats.chartData} />
 
-            <div className="p-8 border border-slate-800/60 rounded-3xl bg-slate-900/20 text-center">
-                <p className="text-slate-500 text-xs font-medium uppercase tracking-[0.2em]">
-                    Segmentación por moneda y métodos de pago próximamente
-                </p>
-            </div>
+
         </div>
     );
 };

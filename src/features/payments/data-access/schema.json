@@ -1,0 +1,899 @@
+{
+  "data": {
+    "Charge": {
+      "fields": [
+        {
+          "name": "id",
+          "type": {
+            "name": null,
+            "kind": "NON_NULL",
+            "ofType": {
+              "name": "ID",
+              "kind": "SCALAR",
+              "ofType": null,
+              "__typename": "__Type"
+            },
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "accountId",
+          "type": {
+            "name": null,
+            "kind": "NON_NULL",
+            "ofType": {
+              "name": "ID",
+              "kind": "SCALAR",
+              "ofType": null,
+              "__typename": "__Type"
+            },
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "providerId",
+          "type": {
+            "name": "ID",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "checkoutId",
+          "type": {
+            "name": null,
+            "kind": "NON_NULL",
+            "ofType": {
+              "name": "ID",
+              "kind": "SCALAR",
+              "ofType": null,
+              "__typename": "__Type"
+            },
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "providerInternalId",
+          "type": {
+            "name": "ID",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "providerReferenceId",
+          "type": {
+            "name": "ID",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "createdAt",
+          "type": {
+            "name": "AWSTimestamp",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "updatedAt",
+          "type": {
+            "name": "AWSTimestamp",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "amount",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "amountEUR",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "authorizationCode",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "billingDetails",
+          "type": {
+            "name": "ContactDetails",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "billingPlan",
+          "type": {
+            "name": "BillingPlans",
+            "kind": "ENUM",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "currency",
+          "type": {
+            "name": null,
+            "kind": "NON_NULL",
+            "ofType": {
+              "name": "String",
+              "kind": "SCALAR",
+              "ofType": null,
+              "__typename": "__Type"
+            },
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "customer",
+          "type": {
+            "name": "Customer",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "description",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "descriptor",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "livemode",
+          "type": {
+            "name": "Boolean",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "orderId",
+          "type": {
+            "name": "ID",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "storeId",
+          "type": {
+            "name": "ID",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "pointOfSaleId",
+          "type": {
+            "name": "ID",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "terminalId",
+          "type": {
+            "name": "ID",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "sequenceId",
+          "type": {
+            "name": "ID",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "subscriptionId",
+          "type": {
+            "name": "ID",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "paymentMethod",
+          "type": {
+            "name": "PaymentMethod",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "cancellationReason",
+          "type": {
+            "name": "CancellationReason",
+            "kind": "ENUM",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "lastRefundAmount",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "lastRefundReason",
+          "type": {
+            "name": "RefundReason",
+            "kind": "ENUM",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "refundedAmount",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "shippingDetails",
+          "type": {
+            "name": "ContactDetails",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "shop",
+          "type": {
+            "name": "Shop",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "status",
+          "type": {
+            "name": null,
+            "kind": "NON_NULL",
+            "ofType": {
+              "name": "ChargeStatus",
+              "kind": "ENUM",
+              "ofType": null,
+              "__typename": "__Type"
+            },
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "statusCode",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "statusMessage",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "sessionDetails",
+          "type": {
+            "name": "SessionDetails",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "traceDetails",
+          "type": {
+            "name": "TraceDetails",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "pageOpenedAt",
+          "type": {
+            "name": "AWSTimestamp",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "metadata",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": null,
+              "kind": "NON_NULL",
+              "ofType": {
+                "name": "KeyValueItem",
+                "kind": "OBJECT",
+                "__typename": "__Type"
+              },
+              "__typename": "__Type"
+            },
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "fraudDetectorScore",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "callbackUrl",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "completeUrl",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "failUrl",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "cancelUrl",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        }
+      ],
+      "__typename": "__Type"
+    },
+    "PaymentMethod": {
+      "fields": [
+        {
+          "name": "method",
+          "type": {
+            "name": "PaymentMethods",
+            "kind": "ENUM",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "card",
+          "type": {
+            "name": "PaymentMethodCard",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "cardPresent",
+          "type": {
+            "name": "PaymentMethodCardPresent",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "bizum",
+          "type": {
+            "name": "PaymentMethodBizum",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "paypal",
+          "type": {
+            "name": "PaymentMethodPaypal",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "trustly",
+          "type": {
+            "name": "PaymentMethodTrustly",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "sepa",
+          "type": {
+            "name": "PaymentMethodSepa",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "klarna",
+          "type": {
+            "name": "PaymentMethodKlarna",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "mbway",
+          "type": {
+            "name": "PaymentMethodMBWay",
+            "kind": "OBJECT",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        }
+      ],
+      "__typename": "__Type"
+    },
+    "PaymentMethodCard": {
+      "fields": [
+        {
+          "name": "brand",
+          "type": {
+            "name": "CardBrand",
+            "kind": "ENUM",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "country",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "type",
+          "type": {
+            "name": "CardType",
+            "kind": "ENUM",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "threeDSecure",
+          "type": {
+            "name": "Boolean",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "threeDSecureVersion",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "threeDSecureFlow",
+          "type": {
+            "name": "ThreeDSecureFlow",
+            "kind": "ENUM",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "last4",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "fingerprint",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "cardholderName",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "cardholderEmail",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "expiration",
+          "type": {
+            "name": "AWSTimestamp",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "bank",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "tokenizationMethod",
+          "type": {
+            "name": "TokenizationMethods",
+            "kind": "ENUM",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        }
+      ],
+      "__typename": "__Type"
+    },
+    "PaymentMethodBizum": {
+      "fields": [
+        {
+          "name": "phoneNumber",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "integrationType",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        }
+      ],
+      "__typename": "__Type"
+    },
+    "PaymentMethodPaypal": {
+      "fields": [
+        {
+          "name": "orderId",
+          "type": {
+            "name": "ID",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "payerId",
+          "type": {
+            "name": "ID",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "email",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "name",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        }
+      ],
+      "__typename": "__Type"
+    },
+    "Customer": {
+      "fields": [
+        {
+          "name": "email",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "name",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "phone",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        }
+      ],
+      "__typename": "__Type"
+    },
+    "BillingDetails": null,
+    "Address": {
+      "fields": [
+        {
+          "name": "city",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "country",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "line1",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "line2",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "zip",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "state",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        }
+      ],
+      "__typename": "__Type"
+    },
+    "Shop": {
+      "fields": [
+        {
+          "name": "name",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        },
+        {
+          "name": "country",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null,
+            "__typename": "__Type"
+          },
+          "__typename": "__Field"
+        }
+      ],
+      "__typename": "__Type"
+    }
+  }
+}
